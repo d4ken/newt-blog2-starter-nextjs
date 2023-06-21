@@ -26,7 +26,7 @@ export function Header({ app }: { app: AppMeta }): JSX.Element {
   return (
     <header className={styles.Header}>
       <div className={styles.Header_Inner}>
-        <Link href="/">
+        <Link legacyBehavior href="/">
           <a href="#" className={styles.Title}>
             {app.icon?.type === 'emoji' && (
               <span className={styles.Title_Icon}>{app.icon.value}</span>

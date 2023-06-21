@@ -6,7 +6,7 @@ export function Footer({ app }: { app: AppMeta }) {
   return (
     <footer className={styles.Footer}>
       <div className={styles.Footer_Inner}>
-        <Link href="/">
+        <Link legacyBehavior href="/">
           <a href="#" className={styles.SiteName}>
             {app.icon?.type === 'emoji' && (
               <span className={styles.SiteName_Icon}>{app.icon.value}</span>

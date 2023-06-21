@@ -52,8 +52,8 @@ export default function Search({ app }: { app: AppMeta }) {
             <div className={styles.Search_Results}>
               {articles.map((article) => (
                 <article key={article._id} className={styles.Article}>
-                  <Link href={`/article/${article.slug}`}>
-                    <a href="#" className={styles.Article_Link}>
+                  <Link legacyBehavior href={`/article/${article.slug}`}>
+                    <a href="#" className={styles.Article_Link} >
                       <h1 className={styles.Article_Title}>{article.title}</h1>
                       <p className={styles.Article_Description}>
                         {htmlToText(article.body, {

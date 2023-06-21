@@ -34,7 +34,7 @@ export function Side({
         <ul className={styles.PopularTags}>
           {popularTags.map((tag) => (
             <li key={tag._id}>
-              <Link href={`/tag/${tag.slug}`}>
+              <Link legacyBehavior href={`/tag/${tag.slug}`}>
                 <a>
                   {tag.name}({tag.total})
                 </a>
@@ -60,7 +60,7 @@ export function Side({
         <ul className={styles.Archives}>
           {archives.map((archive) => (
             <li key={archive.year}>
-              <Link href={`/archive/${archive.year}`}>
+              <Link legacyBehavior href={`/archive/${archive.year}`}>
                 <a>
                   {archive.year}({archive.count})
                 </a>
@@ -86,7 +86,7 @@ export function Side({
         <ul className={styles.Writers}>
           {authors.map((author) => (
             <li key={author._id}>
-              <Link href={`/author/${author.slug}`}>
+              <Link legacyBehavior href={`/author/${author.slug}`}>
                 <a>
                   {author.profileImage?.src ? (
                     <img
